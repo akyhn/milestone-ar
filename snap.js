@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set up ScrollTrigger to snap to each panel
   ScrollTrigger.create({
     trigger: wrapper,
-    snap: 1.15 / (items.length - 1),
+    snap: 1 / (items.length - 1),
     scrub: 1,
     markers: false,
     start: "top center"
