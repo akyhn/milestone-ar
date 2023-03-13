@@ -1,0 +1,319 @@
+body {
+	position: relative;
+}
+/* GRID!!!!!!! */ 
+/* Above 768 px: 14 cols / 32 px gutter */
+/* Below 768 px: 14 cols / 20 px gutter */
+/* Below 480 px: 1 col / 20 px padding */    
+  
+  
+/* text container on content-breaker-text-container, intro-columns, info-tile-tiles, info-tile, fact-info-tile, hr-info-tile - calculate position based on grid described above */ 
+  
+.content-breaker-text-container, .milestone-strategy__container, .safe-city-pillar__container, .highlight-wrapper {
+	width: calc((( 100% - 448px ) / 14 * 8 ) + 288px);
+}
+  
+.fact-info-tile {
+	width: calc((( 100% - 448px ) / 14 * 3 ) + 64px);
+}
+  
+.info-tile, .hr-info-tile {
+	width: calc((( 100% - 448px ) / 14 * 4 ) + 96px);
+}
+
+.info-tiles {
+	align-items: inherit;
+}
+  
+.intro-columns, .info-tiles {
+	width: calc((( 100% - 448px ) / 14 * 12 ) + 352px);  
+}
+
+@media only screen and (max-width: 1279px) {
+  
+	.content-breaker-text-container, .highlight-wrapper {
+		width: calc((( 100% - 448px ) / 14 * 10 ) + 352px);
+	}  
+	.info-tiles {
+		width: auto;
+      	margin: auto 16px 0;
+	}
+	.fact-info-tile {
+		width: calc((100% / 4) - 32px );
+	}
+	.info-tile, .hr-info-tile {
+		width: calc((100% / 3) - 32px );
+	}    
+}
+
+@media only screen and (max-width: 991px) {
+	.intro-columns, .content-breaker-text-container, .highlight-wrapper {
+		width: calc((( 100% - 448px ) / 14 * 12 ) + 352px);  
+	}
+		.fact-info-tile, .info-tile, .hr-info-tile {
+			width: calc( (100% / 2 ) - 32px);
+	}    
+}
+  
+@media only screen and (max-width: 767px) {
+	.intro-columns {
+		width: auto;
+      	margin: auto 20px 0;
+	}
+  	.content-breaker-text-container, .highlight-wrapper {
+		width: auto;
+      	margin-left: 20px;
+      	margin-right: 20px;         
+  	}
+	.info-tiles {
+		width: auto;
+      	margin: auto 10px 0;
+	}  
+	.fact-info-tile, .info-tile, .hr-info-tile {
+		width: calc( (100% / 2 ) - 20px);
+	}
+}
+  
+@media only screen and (max-width: 479px) {
+	.fact-info-tile, .info-tile, .hr-info-tile {
+		width: calc(100% - 20px);
+	} 
+}  
+  
+/* force graph pillars to start animation from the left  */
+.pillar-background {
+	transform-origin: left;
+}
+
+.data-column .graph {
+	transform-origin: bottom;
+}
+  
+/* cut corner on text container on content-breaker-text-container */    
+  
+.content-breaker-text-container:before, .content-breaker-text-container:after  {
+	content: "";
+	position: absolute;
+	left: 0; right: 0;
+	bottom: 99%;
+	border-right: 48px solid transparent;
+}
+
+.content-breaker-text-container:after {
+ 	top: auto;
+ 	bottom: 100%;
+	border-top: none;
+}
+
+  
+.content-breaker-text-container:before, .content-breaker-text-container:after {
+	border-bottom: 48px solid #023852;
+}
+  
+/* text container on article-hero */  
+  
+.hero-article .text-container, .article_text-wrapper {
+	width: calc((( 100% - 448px ) / 14 * 9 ) + 256px);
+    margin-left: calc((( 100% - 448px ) / 14 ) + 48px);  
+}
+
+@media only screen and (max-width: 991px) {
+    .hero-article .text-container{
+        width: calc((( 100% - 280px ) / 14 * 10 ) + 180px);
+        margin-left: calc((( 100% - 280px ) / 14 ) + 30px);        
+	}
+    .article_text-wrapper {
+        width: auto;
+        margin-left: auto;  
+    }
+}
+  
+@media only screen and (max-width: 767px) {
+	.hero-article .text-container {
+		width: auto; 
+    	margin-left: 20px;
+		margin-right: 20px;    
+	}
+}
+
+/* article contents */
+.content-block .intro, .table-section .intro, .content-block .video-player, .content-block .quote, .content-block .quote-name, .table-section .article-text-h1, .content-block .article-col-image, .ms-table, .info-tiles-block .intro, .article-text__grid, .highlights-grid{
+	width: calc((( 100% - 448px ) / 14 * 8 ) + 224px);
+}
+  
+.content-block .quote, .content-block .quote-name {
+	padding-left: calc((( 100% - 448px ) / 14 ) + 32px);
+}
+  
+.article-text-column, .table-section .article-text-column, .article-text-column-header, .content-block .executive-officers-columns, .content-block .article-col-image-small, .content-block .milestone-list-first, .long-text_rich-text, .article-inline__img, .article-rich-text p, .article-rich-text * {
+	width: calc((( 100% - 448px ) / 14 * 6 ) + 160px); 
+}
+  
+@media only screen and (max-width: 1279px) {
+	.content-block .intro, .table-section .intro, .content-block .video-player, .content-block .quote, .content-block .quote-name, .content-block .article-col-image, .table-section .article-text-h1, .ms-table, .highlights-grid {
+		width: calc((( 100% - 448px ) / 14 * 10 ) + 288px);
+	}
+  
+	.content-block .quote, .content-block .quote-name {
+		padding-left: calc((( 100% - 448px ) / 14 ) + 32px);
+	}
+  
+	.article-text-column, .table-section .article-text-column, .article-text-column-header, .content-block .executive-officers-columns, .content-block .article-col-image-small, .content-block .milestone-list-first, .long-text_rich-text, .article-inline__img, .article-rich-text p, .article-rich-text *{
+		width: calc((( 100% - 448px ) / 14 * 8 ) + 224px); 
+	}
+}  
+  
+@media only screen and (max-width: 991px) {
+	.content-block .intro, .table-section .intro, .content-block .video-player, .content-block .quote, .content-block .quote-name, .content-block .article-col-image, .table-section .article-text-h1, .highlights-grid {
+		width: calc((( 100% - 448px ) / 14 * 12 ) + 352px);      
+	}
+  	.ms-table {
+		width: auto; 
+    	margin-left: 32px;
+		margin-right: 32px;        
+  	}
+	.content-block .quote, .content-block .quote-name {
+		padding-left: calc((( 100% - 448px ) / 14 ) + 32px);
+	}
+	.article-text-column, .table-section .article-text-column, .article-text-column-header, .content-block .executive-officers-columns, .content-block .article-col-image-small, .content-block .milestone-list-first, .long-text_rich-text, .article-inline__img, .article-rich-text p, .article-rich-text * {
+		width: calc((( 100% - 448px ) / 14 * 12 ) + 352px); 
+	}  
+}
+  
+@media only screen and (max-width: 767px) {
+	.content-block .intro, .table-section .intro, .content-block .video-player, .content-block .quote, .content-block .quote-name, .article-text-column, .content-block .article-col-image, .content-block .article-col-image-small, .table-section .article-text-column, .article-text-column-header, .content-block .executive-officers-columns, .table-section .article-text-h1, .content-block .milestone-list-first, .long-text_rich-text, .article-inline__img, .article-rich-text p, .article-rich-text *, .highlights-grid {
+		width: auto; 
+    	margin-left: 20px;
+		margin-right: 20px;      
+	}
+	.content-block .quote, .content-block .quote-name {
+		padding-left: 42px;
+	}
+} 
+  
+/* cards forcing square format */    
+  
+.story-card:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+  
+/* cards zoom */    
+  
+.story-card {
+  animation: zoom-out .33s;
+}
+
+.story-card:hover {
+  animation: zoom-in .5s forwards;
+}
+
+@keyframes zoom-in {
+    0% {background-size: 100% 100%;}
+    100% {background-size: 112% 112%;}
+}
+
+@keyframes zoom-out {
+    from {background-size: 112% 112%;}
+    to {background-size: 100% 100%;}
+}
+
+  
+/* Hover effect on index customer story cards */
+
+.index-case-block .index-case-img {
+    animation: zoom-out .33s;
+}  
+  
+.index-case-block:hover .index-case-img {
+	animation: zoom-in .5s forwards;
+}
+  
+.index-case-block:hover .text-body-1 {
+  	text-decoration: underline;
+}
+  
+  
+/* Table styling */
+  
+table.msTable {
+  font-family: Open Sans, Arial, sans-serif;
+  background-color: #0099da;
+  color:#fff;
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+  
+table.msTable th {
+  border: none;
+  padding: 22px 16px;
+  vertical-align: top; 
+  text-align: right;
+  width: 14%;  
+}
+  
+table.msTable td {
+  border: none;
+  padding: 38px 16px;
+  vertical-align: top;
+  text-align: right;
+  width: 14%;  
+}
+  
+table.msTable tbody td {
+  font-size: 14px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.1);
+}
+table.msTable thead {
+  background: #0099da;
+  border: none;
+}
+table.msTable thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+} 
+  
+table .th-label {
+	width: 30%;
+	text-align: left !important;  
+}
+  
+th.th-label.section-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: none;
+  padding-bottom: 32px;
+}   
+  
+@media only screen and (max-width: 991px) {
+	table.msTable td, table.msTable th {
+		padding: 26px 16px;
+ 	 	width: 16%;  
+	}
+	table .th-label {
+		width: 20%; 
+	} 
+}  
+  
+@media only screen and (max-width: 767px) {
+	table.msTable td {
+		padding: 13px 8px;
+	}
+	table.msTable th {
+		padding: 22px 8px;
+	}
+	table.msTable td, table.msTable th, table .th-label {
+ 	 	width: 16.67%;  
+	}
+	table.msTable tbody td, table.msTable thead th {
+  		font-size: 12px;
+  	}
+}
