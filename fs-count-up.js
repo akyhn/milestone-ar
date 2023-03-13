@@ -5,4 +5,6 @@ gsap.to(countNumber, { innerText: 950, duration: 3,
     snap: {
       innerText:5
     } 
-    });
+});
+
+console.log("hej")
