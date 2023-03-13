@@ -1,5 +1,5 @@
 const countNumber = document.querySelector("[fs-countUp='number']");
-let endNumber = countNumber.innerHTML("");
+let endNumber = countNumber.textContent();
 
 gsap.to(countNumber, { innerText: 950, duration: 3, 
     snap: {
