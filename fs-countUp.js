@@ -1,5 +1,8 @@
-import { CountUp } from "/countUp.min.js";
-
 const countNumber = document.querySelector("[fs-countUp='number']");
+let endNumber = countNumber.innerHTML("")
 
-var myDemo = new CountUp(countNumber, 0, 35);
+gsap.to(countNumber, { innerText: 950, duration: 3, 
+    snap: {
+      innerText:5
+    } 
+    });
