@@ -7,4 +7,4 @@ gsap.to(countNumber, { innerText: 950, duration: 3,
     } 
 });
 
-console.log("hej")
+console.log("Hello World")
